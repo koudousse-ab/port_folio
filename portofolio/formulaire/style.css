@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    background-color:thistle;
+}
+input{
+    position: relative;
+    right: 20px;
+    width: 250px;
+    height: 30px;
+    color: rgb(2, 10, 17);
+    border-color: blueviolet;
+    border-radius: 10px;
+    background-color: rgb(250, 248, 248);
+}
+textarea{
+    position: relative;
+    right: 20px;
+    width: 250px;
+    height: 50px;
+    color: rgb(0, 5, 8);
+    border-radius: 10px;
+    background-color: rgb(250, 247, 247);
+}
+form{
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 10px black;
+    text-align: center;
+    background: rgb(140, 140, 173);
+}
+li{
+    list-style: none;
+}
+button{
+    position: relative;
+    font-size: 20px;
+    right: 20px;
+    width: 250px;
+    height: 40px;
+    color: blue;
+    background-color: rgb(36, 245, 88);
+    cursor: pointer;
+    border-radius: 50rem;
+}
+button:hover{
+    color: rgb(12, 118, 204);
+    border-color: chartreuse;
+}
+input:hover{
+    border-color: red;
+}
+textarea:hover{
+    border-color: red;
+}
+h1{
+    position: relative;
+    right: 20px;
+    text-transform: lowercase;
+    box-shadow: 0 0 5px 4px rgb(61, 61, 77) inset;
+    cursor: alias;
+}
+input::placeholder{
+    color: rgb(103, 134, 199);
+    text-transform: capitalize;
+}
+input::shadow{
+    color: brown;
+}
+.re{
+    font-size: 30px;
+    color: rgb(5, 89, 243);
+    text-transform: uppercase;
+    box-shadow: none;
+}
