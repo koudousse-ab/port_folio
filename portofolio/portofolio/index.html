@@ -1,273 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Koudousse | Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCHEDRE Aboudoul-Koudouse | Cyber Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <div class="logo">Koudousse</div>
-    <button id="toggle-mode" aria-label="Changer le mode"><i class="fa-solid fa-moon"></i></button>
-  </nav>
+    <canvas id="matrixRain"></canvas>
 
-  <header>
-    <div class="header-content hacking-header">
-      <img src="assets/images/profile.jpg" alt="Photo de profil" class="profile-pic" />
-      <div>
-        <div class="terminal-bar">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title">root@koudousse:~$</span>
+    <nav>
+        <div class="logo">TCHEDRE.sh</div>
+        <div class="status">Status: <span class="online">ONLINE</span></div>
+    </nav>
+
+    <header>
+        <div class="hacking-header">
+            <img src="assets/images/profile.jpg" alt="Photo de profil" class="profile-pic" />
+            <div class="terminal-container">
+                <div class="terminal-bar">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="terminal-title">koudousse@PhantomTruc:~$ whoami</span>
+                </div>
+                <h1 id="typewriter"></h1>
+                <p id="subtitle"></p>
+            </div>
         </div>
-        <h1 class="typewriter" id="typewriter"></h1>
-        <p class="subtitle" id="subtitle"></p>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="about card">
-      <h2>À propos</h2>
-      <br>Je suis étudiant à l’Université de Kara en sécurité informatique, <br> passionné par les technologies avancées. Mes projets vont du e-commerce au hacking ludique, <br> en passant par le développement web moderne.</p>
-    </section>
+    <main>
+        <section class="card">
+            <h2><i class="fas fa-user-secret"></i> Profil</h2>
+            <p>Étudiant en <strong>Licence Professionnelle de Sécurité Informatique et Cybersécurité</strong>[cite: 6, 8]. Passionné par l’administration système et la protection des infrastructures[cite: 6].</p>
+        </section>
 
-    <section class="skills card">
-      <h2>Compétences</h2>
-      <div class="skill-list">
-        <div class="skill">
-          <span class="hack-text" data-text="HTML"></span>
-          <span class="terminal-skill">[█████████████████████████░] 95%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="CSS"></span>
-          <span class="terminal-skill">[██████████████████████░░░] 90%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="JavaScript"></span>
-          <span class="terminal-skill">[████████████████████░░░░] 85%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="PHP"></span>
-          <span class="terminal-skill">[██████████████████░░░░░░] 80%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="MySQL"></span>
-          <span class="terminal-skill">[█████████████████░░░░░░░] 75%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="Python"></span>
-          <span class="level-badge">LEVEL 7</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="React.js"></span>
-          <span class="terminal-skill">[███████████████░░░░░░░░░] 65%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="C"></span>
-          <span class="terminal-skill">[██████████████░░░░░░░░░░] 60%</span>
-        </div>
-        <div class="skill">
-          <span class="hack-text" data-text="Java"></span>
-          <span class="terminal-skill">[█████████████░░░░░░░░░░░] 55%</span>
-        </div>
-      </div>
-      <div class="tools">
-        <strong>Outils :</strong>
-        <span>XAMPP</span> <span>VS Code</span> <span>Ubuntu</span> <span>Kali Linux</span>
-      </div>
-    </section>
+        <section class="card">
+            <h2><i class="fas fa-shield-alt"></i> Certifications</h2>
+            <div class="skill-log"><span class="log-time">[SUCCESS]</span> Introduction to Cybersecurity - Cisco Academy [cite: 13]</div>
+            <div class="skill-log"><span class="log-time">[100%]</span> Windows Server Administration - Study Raid [cite: 14]</div>
+            <div class="skill-log"><span class="log-time">[93%]</span> Réseaux Informatiques - Study Raid [cite: 15, 28]</div>
+        </section>
 
-    <!-- À placer avant la section Contact -->
-    <section class="projects card">
-      <h2>Projets</h2>
-      <div class="project-list">
-        <div class="project">
-          <img src="assets/images/projet1.png" alt="Projet 1">
-          <div>
-            <!-- <h3>Projet</h3>
-            <p>Brève description du projet, ses objectifs et ce que tu as appris.</p>
-            <span class="tech">HTML</span> <span class="tech">CSS</span>
-            <a href="https://github.com/" target="_blank" class="project-link"><i class="fab fa-github"></i> Voir le code</a> -->
-          </div>
-        </div>
-        <!-- Ajoute d'autres projets ici -->
-      </div>
-    </section>
+        <section class="card">
+            <h2><i class="fas fa-terminal"></i> Arsenal Technique</h2>
+            <div class="skill-list">
+                <div class="skill"><span class="hack-text" data-text="LINUX_KALI"></span><span class="level-badge">ADVANCED</span></div>
+                <div class="skill"><span class="hack-text" data-text="CYBERSECURITY"></span><span class="terminal-skill">85%</span></div>
+                <div class="skill"><span class="hack-text" data-text="PYTHON_C"></span><span class="terminal-skill">75%</span></div>
+            </div>
+        </section>
 
-    <section class="contact card">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:koudousetchedre@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://wa.me/22890159639" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://github.com/" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </section>
+        <section class="card">
+            <h2><i class="fas fa-project-diagram"></i> Projets</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>Custom Linux Shell</h3>
+                    <p>Développement en C d'un interpréteur de commandes (processus fork/exec)[cite: 26].</p>
+                    <span class="tech">C</span> <span class="tech">Linux</span>
+                </div>
+                <div class="project">
+                    <h3>GestionScolaire App</h3>
+                    <p>Gestion académique avec Python, Tkinter et SQLAlchemy[cite: 21, 23].</p>
+                    <span class="tech">Python</span> <span class="tech">SQL</span>
+                </div>
+            </div>
+        </section>
 
-    <section class="hobbies card">
-      <h2>Centres d’intérêt</h2>
-      <ul>
-        <li><i class="fa-solid fa-flask"></i> Sciences</li>
-        <li><i class="fa-solid fa-film"></i> Documentaires</li>
-        <li><i class="fa-solid fa-plane"></i> Voyages</li>
-      </ul>
-    </section>
+        <section class="card">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:koudousetchedre@gmail.com" class="contact-btn">Email</a>
+                <a href="https://wa.me/22890159639" class="contact-btn">WhatsApp</a>
+            </div>
+        </section>
+    </main>
 
-    <div class="skill-log">
-      <span class="log-time">[OK]</span> <span class="hack-text" data-text="React.js"></span> <span class="log-msg">Compétence chargée</span>
-    </div>
-  </main>
-
-  <footer>
-    <span class="terminal-title">root@koudousse:~$</span>
-    <span class="footer-blink">echo "Merci de votre visite !"</span>
-  </footer>
-
-  <canvas id="matrixRain"></canvas>
-
-  <script>
-  // Mode sombre/clair
-  const toggleButton = document.getElementById('toggle-mode');
-  const icon = toggleButton.querySelector('i');
-  toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')) {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
-  });
-
-  // Effet hacking sur les compétences
-  function hackTextEffect(element, text, speed = 30) {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
-    let iterations = 0;
-    let interval = setInterval(() => {
-      let display = "";
-      for (let i = 0; i < text.length; i++) {
-        if (i < iterations) {
-          display += text[i];
-        } else {
-          display += chars[Math.floor(Math.random() * chars.length)];
-        }
-      }
-      element.textContent = display;
-      // Effet sonore
-      if (iterations < text.length && window.hackSound) {
-        window.hackSound.currentTime = 0;
-        window.hackSound.play();
-      }
-      if (iterations >= text.length) clearInterval(interval);
-      iterations += 0.5;
-    }, speed);
-  }
-  window.hackSound = new Audio('assets/sounds/type.mp3');
-window.hackSound.volume = 0.08;
-
-// Débloque le son au premier clic ou touche
-function unlockHackSound() {
-  window.hackSound.play().catch(()=>{});
-  window.removeEventListener('click', unlockHackSound);
-  window.removeEventListener('keydown', unlockHackSound);
-}
-window.addEventListener('click', unlockHackSound);
-window.addEventListener('keydown', unlockHackSound);
-
-  // Animation nom et professions défilantes
-  const name = "TCHEDRE Aboudoul-Koudousse";
-  const professions = [
-    "Cybersécurité 🛡️",
-    "Développement Web 💻",
-    "Intelligence Artificielle 🤖"
-  ];
-  const typewriter = document.getElementById("typewriter");
-  const subtitle = document.getElementById("subtitle");
-
-  let charIndex = 0;
-  let profIndex = 0;
-  let typingName = true;
-
-  function typeEffect() {
-    if (typingName) {
-      if (charIndex <= name.length) {
-        typewriter.textContent = name.slice(0, charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 90);
-      } else {
-        typingName = false;
-        charIndex = 0;
-        setTimeout(typeEffect, 700);
-      }
-    } else {
-      if (charIndex <= professions[profIndex].length) {
-        subtitle.textContent = professions[profIndex].slice(0, charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 70);
-      } else {
-        setTimeout(() => {
-          charIndex = 0;
-          profIndex = (profIndex + 1) % professions.length;
-          subtitle.textContent = "";
-          setTimeout(typeEffect, 600);
-        }, 1200);
-      }
-    }
-  }
-  window.addEventListener("DOMContentLoaded", typeEffect);
-
-  // Lance l'effet hacking sur chaque compétence au chargement
-  window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".hack-text").forEach(span => {
-      setTimeout(() => {
-        hackTextEffect(span, span.dataset.text);
-      }, Math.random() * 800 + 200); // effet décalé pour chaque compétence
-    });
-  });
-
-  // Matrix rain effect
-  const canvas = document.getElementById('matrixRain');
-  if(canvas){
-    const ctx = canvas.getContext('2d');
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-    const letters = "01";
-    const fontSize = 18;
-    const columns = Math.floor(width / fontSize);
-    const drops = Array(columns).fill(1);
-
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(16,24,32,0.08)";
-      ctx.fillRect(0, 0, width, height);
-      ctx.font = fontSize + "px Fira Mono, monospace";
-      ctx.fillStyle = "#00ffae";
-      for(let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if(drops[i] * fontSize > height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    }
-    setInterval(drawMatrix, 50);
-    window.addEventListener('resize', () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    });
-  }
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
